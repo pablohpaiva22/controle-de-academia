@@ -5,4 +5,8 @@ routes.get("/", function(req, res) {
     return res.render("layout")
 })
 
+routes.get("/instructors", function(req, res) {
+    return res.render("instructors/index")
+})
+
 module.exports = routes
