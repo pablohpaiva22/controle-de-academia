@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 
 :root {
-    --color-green: green
+    --color-default: rgb(119, 18, 18);
 }
 
 * {
@@ -11,21 +13,44 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif
+    font-family: 'Roboto', sans-serif;
+    background: var(--color-default);
 }
 
 header {
-    background: rgb(119, 18, 18);
+    background: white;
     text-align: center;
     padding: 50px;
-    border-bottom: 2px solid rgb(0, 0, 0);
+    border-bottom: 4px solid rgb(0, 0, 0);
 }
 
-header a {
-    color: white;
+.links a {
+    color: #777;
     text-decoration: none;
-    padding: 5px 20px;
-    margin: 0 15px;
+    padding: 3px 0;
+    margin: 0 25px;
     font-weight: bold;
+    font-size: 20px;
     line-height: 30px;
+    position: relative;
 }
+
+.links a.active {
+    color: var(--color-default);
+}
+
+.links a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: var(--color-default);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.links a:hover::after {
+    width: 100%;
+    transition: width 200ms ease-in-out 300ms;
+}
+
