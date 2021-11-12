@@ -3,7 +3,7 @@
 
 
 :root {
-    --color-default: rgb(119, 18, 18);
+    --color-default: rgb(61, 112, 116);
 }
 
 * {
@@ -54,7 +54,7 @@ header {
     transition: width 200ms ease-in-out 300ms;
 }
 
-/* ====> CARDS */
+/* ====> CARD */
 
 .card {
     background: white;
@@ -119,4 +119,33 @@ header {
     border-radius: 16px;
     line-height: 40px;
     color: rgb(104, 104, 104)
+}
+
+
+/* ===> CREATE */
+
+input {
+    line-height: 25px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    padding: 0 5px;
+}
+
+input[type="radio"] {
+    width: initial;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.829);
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    margin: 20px 0;
+    padding: 6px;
+    background: var(--color-default);
+    color: white;
+    border-radius: 5px;
 }
