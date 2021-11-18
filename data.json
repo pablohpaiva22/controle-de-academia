@@ -17,6 +17,15 @@
       "sexo_": "F",
       "area_de_atuacao": "Crossfit",
       "created_at": 1637174042456
+    },
+    {
+      "id": 3,
+      "avatar_url_": "https://github.com/pablohpaiva22",
+      "instrutor_": "Cintia Silva",
+      "data_de_nascimento": 725241600000,
+      "sexo_": "F",
+      "area_de_atuacao": "Musculação, crossfit",
+      "created_at": 1637243150643
     }
   ]
 }
