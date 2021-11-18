@@ -22,4 +22,6 @@ routes.post("/instructors", functions.post)
 
 routes.put("/instructors", functions.put)
 
+routes.delete("/instructors", functions.delete)
+
 module.exports = routes

@@ -2,26 +2,36 @@
 
 {% block content %}
 
-<form class="card" method="POST" action="/instructors?_method=PUT">
-    
-    <section class="avatar">
-        
+<div class="card">
+   
+    <section class="avatar">            
     </section>
-        
+
     <section class="form">
+        <form method="POST" action="/instructors?_method=PUT">     
+    
+            <h3>Editar instrutor</h3>
+    
+            {% include 'instructors/fields.njk' %}
+    
+            <input 
+                type="hidden" 
+                name="id"
+                value="{{ found_instructor.id }}"
+                >    
+        </form>
 
-        <h3>Editar instrutor</h3>
-
-        {% include 'instructors/fields.njk' %}
-
-        <input 
-            type="hidden" 
-            name="id"
-            value="{{ found_instructor.id }}"
-            >
+        <form action="/instructors?_method=DELETE" method="post">        
+            <input 
+                type="hidden" 
+                name="id"
+                value="{{ found_instructor.id }}">
+        
+            <button class="button2" type="submit">DELETAR</button>            
+        </form>
 
     </section>
-</form>
 
+</div>
 
 {% endblock content %}

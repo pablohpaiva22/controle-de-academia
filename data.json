@@ -1,15 +1,6 @@
 {
   "instructors": [
     {
-      "id": "1",
-      "avatar_url_": "https://github.com/pablohpaiva22",
-      "instrutor_": "Pablo Paiva 2",
-      "data_de_nascimento": 718588800000,
-      "sexo_": "M",
-      "area_de_atuacao": "Corrida, bike",
-      "created_at": 1637173065873
-    },
-    {
       "id": 2,
       "avatar_url_": "https://github.com/pablohpaiva22",
       "instrutor_": "Jessica Cintra",
@@ -26,6 +17,15 @@
       "sexo_": "F",
       "area_de_atuacao": "Musculação, crossfit",
       "created_at": 1637243150643
+    },
+    {
+      "id": 3,
+      "avatar_url_": "https://github.com/pablohpaiva22",
+      "instrutor_": "Pablo",
+      "data_de_nascimento": 718588800000,
+      "sexo_": "M",
+      "area_de_atuacao": "Corrida, bike",
+      "created_at": 1637264266284
     }
   ]
 }
