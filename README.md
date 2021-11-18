@@ -23,6 +23,7 @@ $ npm start
 # Dependências
 - Express
 - Nunjucks
+- Method-override
 
 # Dependências de desenvolvimento
 - Nodemon

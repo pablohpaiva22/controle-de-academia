@@ -1,9 +1,9 @@
 {
   "instructors": [
     {
-      "id": 1,
+      "id": "1",
       "avatar_url_": "https://github.com/pablohpaiva22",
-      "instrutor_": "Pablo Paiva",
+      "instrutor_": "Pablo Paiva 2",
       "data_de_nascimento": 718588800000,
       "sexo_": "M",
       "area_de_atuacao": "Corrida, bike",

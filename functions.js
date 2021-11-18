@@ -1,5 +1,6 @@
 const fs = require('fs')
 const data = require('./data.json')
+const { date } = require('./uteis')
 const uteis = require('./uteis')
 
 exports.show = function(req, res) {
@@ -18,7 +19,7 @@ exports.show = function(req, res) {
         area_de_atuacao: found_instructor.area_de_atuacao.split(","),
         data_de_nascimento: uteis.age(found_instructor.data_de_nascimento),
         created_at: new Intl.DateTimeFormat('pt-BR').format(found_instructor.created_at)
-        }
+    }
     
     return res.render('instructors/show', { instructor })
     
@@ -56,5 +57,56 @@ exports.post = function(req, res) {
         }
 
         return res.redirect("/instructors")
+    })
+}
+
+exports.edit = function(req, res) {
+    const { id } = req.params
+
+    const found_instructor = data.instructors.find(function(instructor) {
+        return instructor.id == id
+    })
+
+        if (!found_instructor) {
+            return res.send("Instructor not found")
+        }
+
+    const instructor = {
+        ...found_instructor,
+    data_de_nascimento: uteis.date(found_instructor.data_de_nascimento)
+    }
+    
+    return res.render("instructors/edit", { found_instructor: instructor })
+}
+
+exports.put = function(req, res) {
+    const { id } = req.body
+    let index = 0
+
+    const found_instructor = data.instructors.find(function(instructor, foundIndex) {
+        if (instructor.id == id) {
+            index = foundIndex
+            return true
+        }
+    })
+
+        if (!found_instructor) {
+            return res.send("Instructor not found")
+        }
+
+    const instructor = {
+        ...found_instructor,
+        ...req.body,
+        data_de_nascimento: Date.parse(req.body.data_de_nascimento)
+    }
+
+    data.instructors[index] = instructor
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
+        if (err) {
+            return res.send("Write file error!")
+    }
+
+    return res.redirect(`/instructors/${id}`)
     })
 }
