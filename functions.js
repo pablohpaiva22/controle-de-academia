@@ -16,7 +16,8 @@ exports.show = function(req, res) {
     const instructor = {
         ...found_instructor,
         area_de_atuacao: found_instructor.area_de_atuacao.split(","),
-        data_de_nascimento: uteis.age(found_instructor.data_de_nascimento)
+        data_de_nascimento: uteis.age(found_instructor.data_de_nascimento),
+        created_at: new Intl.DateTimeFormat('pt-BR').format(found_instructor.created_at)
         }
     
     return res.render('instructors/show', { instructor })
