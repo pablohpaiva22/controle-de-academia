@@ -1,5 +1,6 @@
 const fs = require('fs')
 const data = require('./data.json')
+const uteis = require('./uteis')
 
 exports.show = function(req, res) {
     const { id } = req.params
@@ -15,7 +16,7 @@ exports.show = function(req, res) {
     const instructor = {
         ...found_instructor,
         area_de_atuacao: found_instructor.area_de_atuacao.split(","),
-        data_de_nascimento: ""
+        data_de_nascimento: uteis.age(found_instructor.data_de_nascimento)
         }
     
     return res.render('instructors/show', { instructor })
