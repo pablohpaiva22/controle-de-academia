@@ -166,3 +166,29 @@ a.button {
     margin-top: 0;
     background: rgb(219, 71, 71);
 }
+
+/* ===> INSTRUCTORS */
+
+.card-content {
+    display: block;
+}
+
+.card-content table {
+    width: 100%;
+    padding: 35px;
+
+}
+
+thead th {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+thead {
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}

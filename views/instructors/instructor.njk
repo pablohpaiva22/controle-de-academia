@@ -2,48 +2,30 @@
 
 {% block content %}
 
-<div class="card">
+<div class="card card-content">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Instrutor</th>
+                <th>Acompanhamento</th>
+                <th>Ver</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for instructor in instructors %}
+            <tr>
+                <td>{{ instructor.instrutor_ }}</td>
+                <td>{{ instructor.area_de_atuacao }}</td>
+                <td><a href="/Instructors/{{ instructor.id }}">Ver</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
     
-    <section class="avatar">
-        
-    </section>
-        
-    <section class="form">
+    </table>
 
-        <h3>detalhes</h3>
-
-        <div class="item">
-            <div>Instrutor</div>
-            <div>Pablo Paiva</div>
-        </div>
-
-        <div class="item">
-            <div>idade</div>
-            <div>29</div>
-        </div>
-
-        <div class="item">
-            <div>Sexo</div>
-            <div>Masculino</div>
-        </div>
-
-        <div class="item">
-            <div>
-                <div>Acompanhamento</div>
-            </div>
-            <div>
-                <span>Musculação</span>
-                <span>Crossfit</span>     
-            </div>
-        </div>
-
-        <div class="item">
-            <div>Desde</div>
-            <div>01/01/2019</div>
-        </div>
-
-    </section>
-
+</div>
 
 {% endblock content %}
 

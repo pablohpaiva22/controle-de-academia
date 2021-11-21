@@ -3,6 +3,10 @@ const data = require('./data.json')
 const { date } = require('./uteis')
 const uteis = require('./uteis')
 
+exports.instructor = function(req, res) {   
+    return res.render("instructors/instructor", { instructors: data.instructors })
+}
+
 exports.show = function(req, res) {
     const { id } = req.params
 
