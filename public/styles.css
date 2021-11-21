@@ -185,10 +185,47 @@ thead th {
     border-bottom: 1px solid rgb(228, 228, 228);
 }
 
-thead {
+tbody td {
+    padding: 20px;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    line-height: 40px;
 }
 
-tbody td {
-    padding: 10px;
-    border-bottom: 1px solid rgb(228, 228, 228);
+/* ===> INSTRUCTORS */
+
+tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 6px;
+}
+
+tbody span {
+    border-radius: 5px;
+    border: 1px solid rgb(46, 46, 46)
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+th {
+    text-transform: uppercase;
+    color: gray;
+}
+
+th:last-child {
+    text-align: center;
+}
+
+td a {
+    text-decoration: none;
+    background-color: green;
+    padding: 5px 15px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+td:last-child {
+    text-align: center;
 }

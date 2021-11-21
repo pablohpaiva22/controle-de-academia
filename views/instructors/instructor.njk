@@ -16,7 +16,10 @@
         <tbody>
             {% for instructor in instructors %}
             <tr>
-                <td>{{ instructor.instrutor_ }}</td>
+                <td>
+                    <span style="background: url({{instructor.avatar_url_}}) center center / cover"></span>
+                    {{ instructor.instrutor_ }}
+                </td>
                 <td>{{ instructor.area_de_atuacao }}</td>
                 <td><a href="/Instructors/{{ instructor.id }}">Ver</a></td>
             </tr>
