@@ -7,6 +7,10 @@ exports.instructor = function(req, res) {
     return res.render("instructors/instructor", { instructors: data.instructors })
 }
 
+exports.create = function(req, res) {
+    return res.render("instructors/create")
+}
+
 exports.show = function(req, res) {
     const { id } = req.params
 
