@@ -1,0 +1,34 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<div class="card card-content">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Instrutor</th>
+                <th>Acompanhamento</th>
+                <th>Ver</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for instructor in instructors %}
+            <tr>
+                <td>
+                    <span style="background: url({{instructor.avatar_url_}}) center center / cover"></span>
+                    {{ instructor.instrutor_ }}
+                </td>
+                <td>{{ instructor.area_de_atuacao }}</td>
+                <td><a href="/Instructors/{{ instructor.id }}">Ver</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    
+    </table>
+
+</div>
+
+{% endblock content %}
+
