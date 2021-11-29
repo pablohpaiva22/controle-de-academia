@@ -175,7 +175,7 @@ a.button {
 
 .card-content table {
     width: 100%;
-    padding: 35px;
+    padding: 4px 35px 35px 35px;
 
 }
 
@@ -217,13 +217,20 @@ th:last-child {
     text-align: center;
 }
 
-td a {
+td a,
+.new {
     text-decoration: none;
     background-color: green;
     padding: 5px 15px;
     color: white;
     text-transform: uppercase;
     border-radius: 4px;
+}
+
+.new {
+    text-align: center;
+    margin: 24px 36px 8px 44px;
+    display: inline-block;
 }
 
 td:last-child {
