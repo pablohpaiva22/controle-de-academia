@@ -44,6 +44,15 @@
       "sexo_": "M",
       "area_de_atuacao": "Corrida",
       "created_at": 1638665208132
+    },
+    {
+      "id": 6,
+      "avatar_url_": "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "instrutor_": "Rosa",
+      "data_de_nascimento": 1612137600000,
+      "sexo_": "F",
+      "area_de_atuacao": "Crossfit",
+      "created_at": 1638744215076
     }
   ]
 }
