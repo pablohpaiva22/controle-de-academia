@@ -8,7 +8,7 @@ exports.instructor = function(req, res) {
 }
 
 exports.create = function(req, res) {
-    return res.render("instructors/create")
+    return res.render("members/create")
 }
 
 exports.show = function(req, res) {
