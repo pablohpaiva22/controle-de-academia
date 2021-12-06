@@ -42,20 +42,21 @@ exports.post = function(req, res) {
         }
     }
 
-    let { avatar_url_, instrutor_, data_de_nascimento, sexo_, area_de_atuacao } = req.body
+    let { avatar_url_, nome_, email_, data_de_nascimento, sexo_, blood_, peso_, altura_ } = req.body
 
     data_de_nascimento = Date.parse(data_de_nascimento)
-    const created_at = Date.now()
-    const id = Number(data.instructors.length + 1)
+    id = Number(data.members.length) + 1
 
-    data.instructors.push({
+    data.members.push({
             id,
             avatar_url_,
-            instrutor_,
+            nome_,
             data_de_nascimento,
             sexo_,
-            area_de_atuacao,
-            created_at,
+            blood_,
+            peso_,
+            email_,
+            altura_
         }
     )
 
@@ -64,7 +65,7 @@ exports.post = function(req, res) {
             return res.send("Write file error!")
         }
 
-        return res.redirect("/instructors")
+        return res.redirect("/members")
     })
 }
 
