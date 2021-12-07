@@ -10,6 +10,17 @@
       "peso_": "80",
       "email_": "josericardo@gmail.com",
       "altura_": "1,90"
+    },
+    {
+      "id": 2,
+      "avatar_url_": "https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "nome_": "Marcela",
+      "data_de_nascimento": 1136073600000,
+      "sexo_": "F",
+      "blood_": "B-",
+      "peso_": "53",
+      "email_": "marcela@hotmail.com",
+      "altura_": "1,64"
     }
   ],
   "instructors": [
