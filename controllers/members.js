@@ -4,7 +4,7 @@ const { date } = require('../uteis')
 const uteis = require('../uteis')
 
 exports.instructor = function(req, res) {   
-    return res.render("instructors/instructor", { instructors: data.instructors })
+    return res.render("members/instructor", { instructors: data.instructors })
 }
 
 exports.create = function(req, res) {
