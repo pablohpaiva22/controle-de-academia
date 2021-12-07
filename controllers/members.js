@@ -14,22 +14,21 @@ exports.create = function(req, res) {
 exports.show = function(req, res) {
     const { id } = req.params
 
-    const found_instructor = data.instructors.find(function(instructor) {
-        return instructor.id == id
+    const found_member = data.members.find(function(member) {
+        return member.id == id
     })
 
-        if (!found_instructor) {
-            return res.send("Instructor not found")
+        if (!found_member) {
+            return res.send("member not found")
         }
     
-    const instructor = {
-        ...found_instructor,
-        area_de_atuacao: found_instructor.area_de_atuacao.split(","),
-        data_de_nascimento: uteis.age(found_instructor.data_de_nascimento),
-        created_at: new Intl.DateTimeFormat('pt-BR').format(found_instructor.created_at)
+    const member = {
+        ...found_member,
+        data_de_nascimento: uteis.age(found_member.data_de_nascimento),
+        created_at: new Intl.DateTimeFormat('pt-BR').format(found_member.created_at)
     }
     
-    return res.render('instructors/show', { instructor })
+    return res.render('members/show', { member })
     
 }
 
