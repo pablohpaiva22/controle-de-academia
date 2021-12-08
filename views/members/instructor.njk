@@ -9,21 +9,25 @@
     <table>
         <thead>
             <tr>
-                <th>Instrutor</th>
-                <th>Acompanhamento</th>
+                <th>Membro</th>
+                <th>E-mail</th>
+                <th>Peso</th>
+                <th>Altura</th>
                 <th>Ver</th>
             </tr>
         </thead>
 
         <tbody>
-            {% for instructor in instructors %}
+            {% for member in members %}
             <tr>
                 <td>
-                    <span style="background: url({{instructor.avatar_url_}}) center center / cover"></span>
-                    {{ instructor.instrutor_ }}
+                    <span style="background: url({{member.avatar_url_}}) center center / cover"></span>
+                    {{ member.nome_ }}
                 </td>
-                <td>{{ instructor.area_de_atuacao }}</td>
-                <td><a href="/Instructors/{{ instructor.id }}">Ver</a></td>
+                <td>{{ member.email_ }}</td>
+                <td>{{ member.peso_ }}</td>
+                <td>{{ member.altura_ }}</td>
+                <td><a href="/members/{{ member.id }}">Ver</a></td>
             </tr>
             {% endfor %}
         </tbody>
