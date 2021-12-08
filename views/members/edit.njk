@@ -8,24 +8,24 @@
     </section>
 
     <section class="form">
-        <form method="POST" action="/instructors?_method=PUT">     
+        <form method="POST" action="/members?_method=PUT">
     
             <h3>Editar instrutor</h3>
     
-            {% include 'instructors/fields.njk' %}
+            {% include 'members/fields.njk' %}
     
             <input 
                 type="hidden" 
                 name="id"
-                value="{{ found_instructor.id }}"
+                value="{{ found_member.id }}"
                 >    
         </form>
 
-        <form action="/instructors?_method=DELETE" method="post">        
+        <form action="/members?_method=DELETE" method="post">        
             <input 
                 type="hidden" 
                 name="id"
-                value="{{ found_instructor.id }}">
+                value="{{ found_member.id }}">
         
             <button class="button2" type="submit">DELETAR</button>            
         </form>

@@ -5,7 +5,7 @@
             type="url" 
             name="avatar_url_"
             placeholder="https://"
-            value="{{ found_instructor.avatar_url_ }}"
+            value="{{ found_member.avatar_url_ }}"
         >
     </div>
 </div>
@@ -17,7 +17,7 @@
             type="text" 
             name="nome_"
             placeholder="Nome do instrutor"
-            value="{{ found_instructor.instrutor_ }}"
+            value="{{ found_member.nome_ }}"
         >            
     </div>
 </div>
@@ -30,7 +30,7 @@
             type="text" 
             name="email_"
             placeholder="example@example.com"
-            value="{{ found_instructor.instrutor_ }}"
+            value="{{ found_member.instrutor_ }}"
         >            
     </div>
 </div>
@@ -42,7 +42,7 @@
         <input 
             type="date" 
             name="data_de_nascimento" 
-            value="{{ found_instructor.data_de_nascimento}}"
+            value="{{ found_member.data_de_nascimento}}"
         >
     </div>
 </div>
@@ -56,7 +56,7 @@
                 type="radio" 
                 name="sexo_" 
                 value="M" 
-                {% if found_instructor.sexo_ == "M" %}
+                {% if found_member.sexo_ == "M" %}
                 checked
                 {% endif %}> Masculino
         </span>
@@ -65,7 +65,7 @@
                 type="radio" 
                 name="sexo_" 
                 value="F" 
-                {% if found_instructor.sexo_ == "F" %}
+                {% if found_member.sexo_ == "F" %}
                 checked 
                 {% endif %}> Feminino
         </span>
@@ -96,7 +96,7 @@
         <input 
             type="number" 
             name="peso_"
-            value="{{ found_instructor.area_de_atuacao}}"
+            value="{{ found_member.peso_}}"
         >
     </div>
 </div>
@@ -108,7 +108,7 @@
         <input 
             type="text" 
             name="altura_"
-            value="{{ found_instructor.area_de_atuacao}}"
+            value="{{ found_member.altura_}}"
         >
     </div>
 </div>

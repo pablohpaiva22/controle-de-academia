@@ -1,17 +1,6 @@
 {
   "members": [
     {
-      "id": 1,
-      "avatar_url_": "https://images.unsplash.com/photo-1580261450046-d0a30080dc9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=709&q=80",
-      "nome_": "José Ricardo",
-      "data_de_nascimento": 654739200000,
-      "sexo_": "M",
-      "blood_": "AB1",
-      "peso_": "80",
-      "email_": "josericardo@gmail.com",
-      "altura_": "1,90"
-    },
-    {
       "id": 2,
       "avatar_url_": "https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "nome_": "Marcela",
@@ -24,15 +13,6 @@
     }
   ],
   "instructors": [
-    {
-      "id": 1,
-      "avatar_url_": "https://images.unsplash.com/photo-1580261450046-d0a30080dc9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=709&q=80",
-      "instrutor_": "Pedro Ramos",
-      "data_de_nascimento": 523238400000,
-      "sexo_": "M",
-      "area_de_atuacao": "Musculação",
-      "created_at": 1638545623994
-    },
     {
       "id": 2,
       "avatar_url_": "https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",

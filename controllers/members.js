@@ -71,27 +71,27 @@ exports.post = function(req, res) {
 exports.edit = function(req, res) {
     const { id } = req.params
 
-    const found_instructor = data.instructors.find(function(instructor) {
-        return instructor.id == id
+    const found_member = data.members.find(function(member) {
+        return member.id == id
     })
 
-        if (!found_instructor) {
-            return res.send("Instructor not found")
+        if (!found_member) {
+            return res.send("member not found")
         }
 
-    const instructor = {
-        ...found_instructor,
-    data_de_nascimento: uteis.date(found_instructor.data_de_nascimento)
+    const member = {
+        ...found_member,
+    data_de_nascimento: uteis.date(found_member.data_de_nascimento)
     }
     
-    return res.render("instructors/edit", { found_instructor: instructor })
+    return res.render("members/edit", { found_member: member })
 }
 
 exports.put = function(req, res) {
     const { id } = req.body
     let index = 0
 
-    const found_instructor = data.instructors.find(function(instructor, foundIndex) {
+    const found_instructor = data.members.find(function(instructor, foundIndex) {
         if (instructor.id == id) {
             index = foundIndex
             return true
@@ -109,29 +109,29 @@ exports.put = function(req, res) {
         id: Number(found_instructor.id)
     }
 
-    data.instructors[index] = instructor
+    data.members[index] = instructor
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
         if (err) {
             return res.send("Write file error!")
     }
 
-    return res.redirect(`/instructors/${id}`)
+    return res.redirect(`/members/${id}`)
     })
 }
 
 exports.delete = function(req, res) {
     const id = req.body.id
 
-    const filteredInstructors = data.instructors.filter(function(instructor) {
+    const filteredInstructors = data.members.filter(function(instructor) {
         return instructor.id != id
     })
 
-    data.instructors = filteredInstructors
+    data.members = filteredInstructors
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
         if (err) return res.send ("Write file error")
 
-        return res.redirect("/instructors")
+        return res.redirect("/members")
     })
 }
