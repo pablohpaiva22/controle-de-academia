@@ -46,7 +46,12 @@ exports.post = function(req, res) {
 
     data_de_nascimento = Date.parse(data_de_nascimento)
     const created_at = Date.now()
-    const id = Number(data.instructors.length + 1)
+    let id = Number(data.instructors.length + 1)
+
+    for (item of data.instructors)
+        if (id == item.id) {
+            id = id + 1
+        }
 
     data.instructors.push({
             id,

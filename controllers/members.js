@@ -44,7 +44,12 @@ exports.post = function(req, res) {
     let { avatar_url_, nome_, email_, data_de_nascimento, sexo_, blood_, peso_, altura_ } = req.body
 
     data_de_nascimento = Date.parse(data_de_nascimento)
-    id = Number(data.members.length) + 1
+    let id = Number(data.members.length) + 1
+
+    for (item of data.members)
+    if (id == item.id) {
+        id = id + 1
+    }
 
     data.members.push({
             id,
