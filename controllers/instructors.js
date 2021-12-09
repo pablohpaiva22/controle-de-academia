@@ -48,11 +48,12 @@ exports.post = function(req, res) {
     const created_at = Date.now()
     let id = Number(data.instructors.length + 1)
 
-    for (item of data.instructors)
+    for (item of data.instructors) {
         if (id == item.id) {
             id = id + 1
         }
-
+    }
+    
     data.instructors.push({
             id,
             avatar_url_,

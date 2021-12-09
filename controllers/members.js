@@ -46,11 +46,12 @@ exports.post = function(req, res) {
     data_de_nascimento = Date.parse(data_de_nascimento)
     let id = Number(data.members.length) + 1
 
-    for (item of data.members)
-    if (id == item.id) {
-        id = id + 1
+    for (item of data.members) {
+        if (id == item.id) {
+            id = id + 1
+        }
     }
-
+    
     data.members.push({
             id,
             avatar_url_,
