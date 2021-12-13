@@ -1,6 +1,6 @@
 # Material de estudo - videoaulas PT 2.
 Material criado para estudar/praticar ferramentas e tecnologias aprendidas e acompanhar conteúdo de videoaulas.
-controle-de-academia
+- controle-de-academia
 
 # Instalação
 ```
